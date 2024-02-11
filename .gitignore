@@ -1,0 +1,8 @@
+*.o
+*.png
+*.wts
+*.dot
+*.engine
+*.yml
+*forum
+*test1-app
