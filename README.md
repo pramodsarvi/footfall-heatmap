@@ -12,6 +12,15 @@ Real-time Analytics: Stay informed with real-time analytics, enabling you to mak
 
 Scalability: Whether you're working with a small business space or a large event venue, our Footfall Heatmap Generator is designed to scale according to your needs, providing accurate and detailed visualizations for areas of any size.
 
+## Tech Stack
+
+- [DeepStream] - Streaming Analytics toolkit for video, image, audio processing/understanding.
+- [TensorRT] - TensorRT is a machine learning framework that is used to run machine learning inference on Nvidia hardware.
+- [YOLOV5] - YOLO is a advanced computer vision algorithm that is used in object detection.
+- [Jetson] - It is a SOM device manufactured by Nvidia for running tensor intensive application.
+
+![Jetson](https://i.imgur.com/eCMj2EV.jpg)
+
 
 
 ## Installation

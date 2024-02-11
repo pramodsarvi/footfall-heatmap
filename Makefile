@@ -61,13 +61,22 @@ LIBS+= -L/usr/local/cuda-$(CUDA_VER)/lib64/ -lcudart \
 	   
 
 
-all: $(APP)
+all: $(APP) 
+
+# objdets
+
+# objdets: yolov5
+
+
 
 %.o: %.cpp $(INCS) Makefile
 	g++ -c -o $@ $(CFLAGS) $<
 
 $(APP): $(OBJS) Makefile
 	g++ -o $(APP) $(OBJS) $(LIBS)
+
+# yolov5:
+# 	cd model_parsers/yolov5_v5_parser && $(MAKE)
 
 install: $(APP)
 	cp -rv $(APP) $(APP_INSTALL_DIR)
