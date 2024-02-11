@@ -1,6 +1,6 @@
 *.o
 *.png
-*.wts
+# *.wts
 *.dot
 *.engine
 *.yml
