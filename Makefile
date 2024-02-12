@@ -26,7 +26,7 @@ ifeq ($(CUDA_VER),)
   $(error "CUDA_VER is not set")
 endif
 
-APP:= deepstream-test1-app
+APP:= footfall
 
 TARGET_DEVICE = $(shell g++ -dumpmachine | cut -f1 -d -)
 
@@ -83,5 +83,4 @@ install: $(APP)
 
 clean:
 	rm -rf $(OBJS) $(APP)
-
 

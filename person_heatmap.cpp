@@ -483,16 +483,22 @@ static GstPadProbeReturn infer_sink_pad_buffer_probe(GstPad *pad,
       Mat im_color;
       Mat res;
       Mat temp;
-      double alpha = 0.9; double beta;
+      double alpha = 0.75; double beta;
     beta = ( 1.0 - alpha );
     Mat bgr;
-    cv::cvtColor(rotate_mat, bgr, cv::COLOR_RGBA2BGR);
+    cv::cvtColor(rotate_mat, bgr, cv::COLOR_RGBA2RGB);
     canvas.convertTo(temp,CV_8UC1);
     applyColorMap(temp, im_color, COLORMAP_JET);
     snprintf(file_name, sizeof(file_name), "heatmap.png", 0);
     addWeighted( bgr, alpha, im_color, beta, 0.0, res);
-
       cv::imwrite(file_name, res);
+
+
+
+    snprintf(file_name, sizeof(file_name), "map.png", 0);
+      cv::imwrite(file_name, im_color);
+
+
     }
 #ifdef PLATFORM_TEGRA
     if (inter_buf->memType == NVBUF_MEM_SURFACE_ARRAY) {
